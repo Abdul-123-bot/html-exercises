@@ -1,0 +1,81 @@
+<html>
+    <head>
+		<title>Student Registartion form</title>
+        <style>
+			label{
+				line-height:1.8;
+			}
+            body{
+                text-align: center;
+            }
+			h1{
+				text-align: center;
+			}
+			div{
+				border: 5px solid black;
+				margin-left: 300px;
+				margin-right: 300px;
+			}
+        </style>
+    </head>
+<body>
+	Name:A K Arbaz Roll.no:1602-17-737-061<br/>
+	<div>
+	<p><img src="vce.jpg" height="150" ></p>
+ <h1> STUDENT REGISTRATION FORM </h1>          
+     
+	<p>User Name: <input onclick="func()" type="text" id="name" size=20 name="Name" pattern="^[a-zA-Z]*$^"><br><br>
+		<form>
+<label>Password:</label>
+<input type="password" name="pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+title="Must contain at least one number and one uppercase and lowercase letter, and at
+least 8 or more characters">
+</form>
+<form name="RegForm" action="/submit.php" onsubmit="return GEEKFORGEEKS()" method="post">  
+<form>
+<label>Email:</label>
+<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+</form>
+	<form name="RegForm" action="/submit.php" onsubmit="return GEEKFORGEEKS()" method="post">  
+    <label> phone: <input type="text" id="passwords" size=20 name="Telephone" pattern="(?=.*\d).{10,}"> </label><br>  
+    <label> Select Languages Known:<input type="checkbox">Hindi
+        <input type="checkbox">English
+        <input type="checkbox">Telugu
+	</label><br>
+    <label> Select gender:<input type="radio" name="btns">male
+        <input type="radio" name="btns">female
+	</label><br>
+    <label> Give your comment:<br>  <textarea  cols="30"  rows="10" name="comment"></textarea></label><br>
+    <label> Select Resume to Upload:<input type="file" value="Browse"></label><br>
+    <label><button onclick="myFunction()" onclick="func()">Submit Query</button>
+      
+        <input type="reset" value="Reset" name="Reset">  
+    </label> <br>         
+</form>
+	</div>
+	<script>
+		function myFunction(){
+			var username=document.getElementById("name");
+			var email=document.getElementById("email");
+			var password=document.getElementById("password");
+			var phone=document.activeElementById("phone");
+			if (email.validity.typeMismatch) {
+				alert("Invalid!");
+				}
+				else {
+
+				email.setCustomValidity(" ");
+			}
+			if(username.onclick ==""){
+				alert("Enter username");
+			}
+			if(password.onclick ==""){
+				alert("Enter Password");
+			}
+		}
+		
+		}
+	
+	</script>
+</body>
+</html> 
